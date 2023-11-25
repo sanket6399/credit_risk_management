@@ -4,7 +4,7 @@ import joblib
 app = Flask(__name__)
 
 # Load your machine learning model
-model = joblib.load(r"/app/app/randomForest_model.pkl")
+model = joblib.load(r"randomForest_model.pkl")
 
 @app.route('/')
 def index():
