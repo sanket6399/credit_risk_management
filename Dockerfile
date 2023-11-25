@@ -17,4 +17,4 @@ EXPOSE $PORT
 ENV NAME World
 
 # Run app.py when the container launches
-CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app/app
+CMD ["python", "app/app.py"]
