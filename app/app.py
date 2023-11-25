@@ -17,7 +17,7 @@ def predict():
     loan_amount = float(request.form['loanAmount'])
     print(loan_amount)
     term_36 = int(request.form.get('term36', 0) == 'on') 
-    term_60 = int(request.form.get('term60', 0) == 'on')  # Checkbox value (1 if checked, 0 if not)
+    term_60 = int(request.form.get('term60', 0) == 'on')
     inquiries = int(request.form['inquiries'])
     initial_list_status = request.form['initialListStatus']
     employment_length = int(request.form['employmentLength'])
