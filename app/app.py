@@ -3,7 +3,7 @@ import pickle
 
 app = Flask(__name__)
 
-# Load your machine learning model
+# Load your machine learning mode
 model = pickle.load(open(r"/app/app/randomForest_model.pkl"))
 
 @app.route('/')
