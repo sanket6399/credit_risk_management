@@ -1,0 +1,39 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+.result-text {
+    font-size: 18px;
+    color: #333;
+}
+
+.success-animation {
+    margin-top: 30px;
+}
+
+.success-message {
+    font-size: 20px;
+    color: #4caf50;
+}
+
+/* Add more styles and animations as needed */

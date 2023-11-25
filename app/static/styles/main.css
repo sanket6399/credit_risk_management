@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.field-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.field-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.checkbox-label:hover {
+    color: #4caf50; /* Change color on hover */
+}
+
+.checkbox-label input {
+    margin-right: 5px;
+}
+
+/* Style checkboxes in a single vertical column */
+.checkbox-label input {
+    display: block;
+    margin-top: 5px;
+}
+
+.submit-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}

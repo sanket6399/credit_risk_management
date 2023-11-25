@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Risk Evaluation - Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/result.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Prediction Result</h1>
+        <div class="result-container">
+            <p class="result-text">The predicted loan status is: {{ prediction }}</p>
+        </div>
+        {% if prediction == 1 %}
+            <div class="success-animation">
+                <img src="{{ url_for('static', filename='images/firework.gif') }}" alt="Fireworks Animation">
+                <p class="success-message">Congratulations! Your loan application is successful!</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

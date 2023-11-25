@@ -1,0 +1,66 @@
+id
+loan_amnt (listed amount by the borrower for the loan)
+term    (Values are in months, can be 36 or 60 or more)
+int_rate (Not needed)
+loan_status (Not needed)
+inq_last_6mths (how many enquiries did the customer make in last 6 months)
+initial_list_status 
+employment_length
+annual income
+out_prncp (total principle amount remaining)
+total_pymnt (total payment the person has to make)
+total_rec_int (interest received till date)
+total_rec_late_fee (Late fees received till date)
+recoveries (Post charge off gross recoveries)
+last_pymnt_amnt (what was the last payment amount)
+delinq_amnt (The past-due amount owed for the accounts on which the borrower is now delinquent.)
+debt_settlement_flag (Flags whether or not the borrower, who has charged-off, is working with a debt-settlement company.)
+Status	(The status of the borrower’s settlement plan. Possible values are: COMPLETE, ACTIVE, BROKEN, CANCELLED, DENIED, DRAFT
+) based on that fill the values of A B C D
+home ownership(is it a Rented house, Mortgage or own)
+home_ownership_RENT 
+home_ownership_MORTGAGE
+home_ownership_OWN
+Not Verified (Is the customer verified)
+Source Verified (if he is verified, what was the source)
+Verified
+purpose of the loan (car, credit card, debt consolidation, home improvement, house, major purchase, medical, moving, renewable energy, small business, vacation, wedding)
+purpose_car
+purpose_credit_card
+purpose_debt_consolidation
+purpose_home_improvement
+purpose_house
+purpose_major_purchase
+purpose_medical
+purpose_moving
+purpose_renewable_energy
+purpose_small_business
+purpose_vacation
+purpose_wedding
+
+
+
+
+id
+Loan amount (listed amount by the borrower for the loan)
+Term    Should be checkbox (Values are in months, can be 36 or 60)
+Interest Rate (Not needed)
+Loan status (Not needed)
+Inquiries in last 6 months (how many enquiries did the customer make in last 6 months)
+initial_list_status 
+Employment length
+Annual Income
+Outstanding principle (total principle amount remaining)
+Total Payment (total payment the person has to make)
+Total recovered interest (interest received till date)
+Total late fee recovered (Late fees received till date)
+Recoveries (Post charge off gross recoveries)
+Last payment amount (what was the last payment amount)
+Delinquency amount (The past-due amount owed for the accounts on which the borrower is now delinquent.)
+Debt Settlement (Checkbox) (Flags whether or not the borrower, who has charged-off, is working with a debt-settlement company.)
+Status	(Should be a checkboxes)(The status of the borrower’s settlement plan. Possible values are: COMPLETE, ACTIVE, BROKEN, CANCELLED, DENIED, DRAFT
+)
+House ownership details (should be a checkboxes, by default should be no) (is it a Rented house, Mortgage or own)
+Verified (Yes/ no checkbox)
+Source Verified (if he is verified, what was the source)
+Purpose of the loan (should be a checkboxes) (car, credit card, debt consolidation, home improvement, house, major purchase, medical, moving, renewable energy, small business, vacation, wedding)
