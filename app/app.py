@@ -8,6 +8,7 @@ app = Flask(__name__)
 #model = pickle.load(open('/app/app/randomForest_model.pkl', 'rb'))
 file_path = r"/app/app/randomForest_model.pkl"
 with open(file_path, 'rb') as file:
+    print(file)
     model = pickle.load(file)
 @app.route('/')
 def index():
