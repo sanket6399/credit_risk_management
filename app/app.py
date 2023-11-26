@@ -72,6 +72,7 @@ def predict():
     interest_rate, loan_status, initial_list_status, status, debt_settlement, not_verified = get_loan_details()
     if source_verified == '':
         verified = 0
+    
     source_verified = 0
     # Example: Convert the collected data into a format that can be passed to the model
     input_data = [
