@@ -74,7 +74,7 @@ def predict():
         verified = 0
     
     source_verified = 0
-    # Example: Convert the collected data into a format that can be passed to the model
+    # Example: Convert the collected data into a format thatcan be passed to the model
     input_data = [
         loan_amount, term, interest_rate, inquiries, initial_list_status,
         outstanding_principle, total_payment, total_recovered_interest, total_late_fee_recovered,
