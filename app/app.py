@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request
 import pickle
-
+import joblib
 app = Flask(__name__)
 
 # Load your machine learning mode
-model = pickle.load(open('/app/app/randomForest_model.pkl', 'rb'))
+model = joblib.load(r'/app/app/randomForest_model.pkl')
+#model = pickle.load(open('/app/app/randomForest_model.pkl', 'rb'))
 
 @app.route('/')
 def index():
