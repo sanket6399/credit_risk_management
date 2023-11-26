@@ -10,12 +10,17 @@
     <div class="container">
         <h1>Loan Prediction Result</h1>
         <div class="result-container">
-            <p class="result-text">The predicted loan status is: {{ prediction }}</p>
+            {% if prediction == 1 %}
+            <p class="result-text">The predicted loan status is: safe</p>
+            {% else %}
+            <p class="result-text" style="color: red;">The predicted loan status is: unsafe</p>
+            {% endif %}
+            
         </div>
         {% if prediction == 1 %}
             <div class="success-animation">
                 <img src="{{ url_for('static', filename='images/firework.gif') }}" alt="Fireworks Animation">
-                <p class="success-message">Congratulations! Your loan application is successful!</p>
+                <p class="success-message">Hurraayyy! From the analysis, looks like its not a risky record!</p>
             </div>
         {% endif %}
     </div>

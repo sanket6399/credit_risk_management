@@ -1,143 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
     <title>Credit Risk Evaluation</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Credit Risk Evaluation</h1>
-        <form method="POST" action="/predict">
-            <label for="loanAmount" class="field-label">Loan Amount:</label>
-            <input type="text" name="loanAmount" required class="field-input">
+        <div id="multicol">
+            <form method="POST" action="/predict">
+                <label for="loanAmount" class="field-label">Loan Amount:</label>
+                <input type="text" name="loanAmount" required class="field-input">
 
-            <label class="field-label">Term:</label>
-            <label for="term36" class="checkbox-label">36 Months
-                <input type="checkbox" name="term36" id="term36">
-            </label>
-            <label for="term60" class="checkbox-label">60 Months
-                <input type="checkbox" name="term60" id="term60">
-            </label>
 
-            <label for="inquiries" class="field-label">Inquiries in Last 6 Months:</label>
-            <input type="text" name="inquiries" class="field-input">
 
-            <label for="initialListStatus" class="field-label">Initial List Status:</label>
-            <input type="text" name="initialListStatus" class="field-input">
 
-            <label for="employmentLength" class="field-label">Employment Length:</label>
-            <input type="text" name="employmentLength" class="field-input">
+                <label for="inquiries" class="field-label">Inquiries in Last 6 Months:</label>
+                <input type="text" name="inquiries" class="field-input">
 
-            <label for="annualIncome" class="field-label">Annual Income:</label>
-            <input type="text" name="annualIncome" class="field-input">
 
-            <label for="outstandingPrinciple" class="field-label">Outstanding Principle:</label>
-            <input type="text" name="outstandingPrinciple" class="field-input">
+                <label for="annualIncome" class="field-label">Annual Income:</label>
+                <input type="text" name="annualIncome" class="field-input">
 
-            <label for="totalPayment" class="field-label">Total Payment:</label>
-            <input type="text" name="totalPayment" class="field-input">
 
-            <label for="totalRecoveredInterest" class="field-label">Total Recovered Interest:</label>
-            <input type="text" name="totalRecoveredInterest" class="field-input">
+                <label for="totalPayment" class="field-label">Total Payment:</label>
+                <input type="text" name="totalPayment" class="field-input">
 
-            <label for="totalLateFeeRecovered" class="field-label">Total Late Fee Recovered:</label>
-            <input type="text" name="totalLateFeeRecovered" class="field-input">
 
-            <label for="recoveries" class="field-label">Recoveries:</label>
-            <input type="text" name="recoveries" class="field-input">
+                <label for="totalLateFeeRecovered" class="field-label">Total Late Fee Recovered:</label>
+                <input type="text" name="totalLateFeeRecovered" class="field-input">
 
-            <label for="lastPaymentAmount" class="field-label">Last Payment Amount:</label>
-            <input type="text" name="lastPaymentAmount" class="field-input">
 
-            <label for="delinquencyAmount" class="field-label">Delinquency Amount:</label>
-            <input type="text" name="delinquencyAmount" class="field-input">
+                <label class="field-label">Previous Loan Status:</label>
+                <label for="complete" class="checkbox-label">
+                    <input type="checkbox" name="status" id="complete">
+                    Complete
 
-            <label for="debtSettlement" class="checkbox-label">Debt Settlement
-                <input type="checkbox" name="debtSettlement" id="debtSettlement">
-            </label>
+                </label>
+                <label for="active" class="checkbox-label">
+                    <input type="checkbox" name="status" id="active">
+                    Active
+                </label>
+                <label for="broken" class="checkbox-label">
+                    <input type="checkbox" name="status" id="broken">
+                    Broken
+                </label>
+                <label for="cancelled" class="checkbox-label">
+                    <input type="checkbox" name="status" id="cancelled">
+                    Cancelled
+                </label>
+                <label for="denied" class="checkbox-label">
+                    <input type="checkbox" name="status" id="denied">
+                    Denied
+                </label>
+                <label for="draft" class="checkbox-label">
+                    <input type="checkbox" name="status" id="draft">
+                    Draft
+                </label>
+                <label for="sourceVerified" class="field-label">Source Verified:</label>
+                <input type="text" name="sourceVerified" class="field-input">
 
-            <label class="checkbox-label">Status:</label>
-            <label for="complete" class="checkbox-label">Complete
-                <input type="checkbox" name="status" id="complete">
-            </label>
-            <label for="active" class="checkbox-label">Active
-                <input type="checkbox" name="status" id="active">
-            </label>
-            <label for="broken" class="checkbox-label">Broken
-                <input type="checkbox" name="status" id="broken">
-            </label>
-            <label for="cancelled" class="checkbox-label">Cancelled
-                <input type="checkbox" name="status" id="cancelled">
-            </label>
-            <label for="denied" class="checkbox-label">Denied
-                <input type="checkbox" name="status" id="denied">
-            </label>
-            <label for="draft" class="checkbox-label">Draft
-                <input type="checkbox" name="status" id="draft">
-            </label>
 
-            <label class="checkbox-label">House Ownership:</label>
-            <label for="rented" class="checkbox-label">Rented
-                <input type="checkbox" name="houseOwnership" id="rented">
-            </label>
-            <label for="mortgage" class="checkbox-label">Mortgage
-                <input type="checkbox" name="houseOwnership" id="mortgage">
-            </label>
-            <label for="own" class="checkbox-label">Own
-                <input type="checkbox" name="houseOwnership" id="own">
-            </label>
+                <label for="employmentLength" class="field-label">Employment Length:</label>
+                <input type="text" name="employmentLength" class="field-input">
+                </br>
+                </br>
+                </br>
 
-            <label for="verified" class="checkbox-label">Verified
-                <input type="checkbox" name="verified" id="verified">
-            </label>
+                <label class="field-label">Term:</label>
+                <label for="term36" class="checkbox-label">
+                    <input type="checkbox" name="term36" id="term36">
+                    36 Months
+                </label>
+                <label for="term60" class="checkbox-label">
+                    <input type="checkbox" name="term60" id="term60">
+                    60 Months
+                </label>
 
-            <label for="sourceVerified" class="field-label">Source Verified:</label>
-            <input type="text" name="sourceVerified" class="field-input">
 
-            <label class="checkbox-label">Purpose of the Loan:</label>
-            <label for="car" class="checkbox-label">Car
-                <input type="checkbox" name="loanPurpose" id="car">
-            </label>
-            <label for="creditCard" class="checkbox-label">Credit Card
-                <input type="checkbox" name="loanPurpose" id="creditCard">
-            </label>
-            <label for="debtConsolidation" class="checkbox-label">Debt Consolidation
-                <input type="checkbox" name="loanPurpose" id="debtConsolidation">
-            </label>
-            <label for="homeImprovement" class="checkbox-label">Home Improvement
-                <input type="checkbox" name="loanPurpose" id="homeImprovement">
-            </label>
-            <label for="house" class="checkbox-label">House
-                <input type="checkbox" name="loanPurpose" id="house">
-            </label>
-            <label for="majorPurchase" class="checkbox-label">Major Purchase
-                <input type="checkbox" name="loanPurpose" id="majorPurchase">
-            </label>
-            <label for="medical" class="checkbox-label">Medical
-                <input type="checkbox" name="loanPurpose" id="medical">
-            </label>
-            <label for="moving" class="checkbox-label">Moving
-                <input type="checkbox" name="loanPurpose" id="moving">
-            </label>
-            <label for="renewableEnergy" class="checkbox-label">Renewable Energy
-                <input type="checkbox" name="loanPurpose" id="renewableEnergy">
-            </label>
-            <label for="smallBusiness" class="checkbox-label">Small Business
-                <input type="checkbox" name="loanPurpose" id="smallBusiness">
-            </label>
-            <label for="vacation" class="checkbox-label">Vacation
-                <input type="checkbox" name="loanPurpose" id="vacation">
-            </label>
-            <label for="wedding" class="checkbox-label">Wedding
-                <input type="checkbox" name="loanPurpose" id="wedding">
-            </label>
+                <label for="outstandingPrinciple" class="field-label">Outstanding Principle:</label>
+                <input type="text" name="outstandingPrinciple" class="field-input">
 
-            <!-- Add more purpose options as needed -->
 
-            <button type="submit" class="submit-button">Submit</button>
+
+                <label for="totalRecoveredInterest" class="field-label">Total Recovered Interest:</label>
+                <input type="text" name="totalRecoveredInterest" class="field-input">
+
+                <label for="lastPaymentAmount" class="field-label">Last Payment Amount:</label>
+                <input type="text" name="lastPaymentAmount" class="field-input">
+
+
+                <label class="field-label">House Ownership:</label>
+                <label for="rented" class="checkbox-label">
+                    <input type="checkbox" name="houseOwnership" id="rented">
+                    Rented
+                </label>
+                <label for="mortgage" class="checkbox-label">
+                    <input type="checkbox" name="houseOwnership" id="mortgage">
+                    Mortgage
+                </label>
+                <label for="own" class="checkbox-label">
+                    <input type="checkbox" name="houseOwnership" id="own">
+                    Own
+                </label>
+
+                <label class="field-label">Purpose of the Loan:</label>
+                <label for="car" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="car">
+                    Car
+                </label>
+                <label for="creditCard" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="creditCard">
+                    Credit Card
+                </label>
+                <label for="debtConsolidation" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="debtConsolidation">
+                    Debt Consolidation
+                </label>
+                <label for="homeImprovement" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="homeImprovement">
+                    Home Improvement
+                </label>
+                <label for="house" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="house">
+                    House
+                </label>
+                <label for="majorPurchase" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="majorPurchase">
+                    Major Purchase
+                </label>
+                <label for="medical" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="medical">
+                    Medical
+                </label>
+                <label for="moving" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="moving">
+                    Moving
+                </label>
+                <label for="renewableEnergy" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="renewableEnergy">
+                    Renewable Energy
+                </label>
+                <label for="smallBusiness" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="smallBusiness">
+                    Small Business
+                </label>
+                <label for="vacation" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="vacation">
+                    Vacation
+                </label>
+                <label for="wedding" class="checkbox-label">
+                    <input type="checkbox" name="loanPurpose" id="wedding">
+                    Wedding
+                </label>
+
+        </div>
+        <!-- Add more purpose options as needed -->
+        </br>
+        </br>
+
+        <button type="submit" class="submit-button" style="margin-left: 44%;font-weight: 600;">Submit</button>
         </form>
     </div>
 </body>
+
 </html>

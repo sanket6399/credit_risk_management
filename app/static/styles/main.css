@@ -4,6 +4,12 @@ body {
     margin: 0;
 }
 
+#multicol{
+    margin-right: 2rem;
+    columns: 2;
+    column-gap: 5rem;
+}
+
 .container {
     max-width: 800px;
     margin: 50px auto;
@@ -26,6 +32,7 @@ form {
     display: block;
     margin-bottom: 8px;
     color: #555;
+    font-weight: 600;
 }
 
 .field-input {
@@ -34,6 +41,7 @@ form {
     margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    max-width: 780px;
 }
 
 .checkbox-label {
@@ -42,6 +50,8 @@ form {
     color: #555;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
+    display: flex;
+    
 }
 
 .checkbox-label:hover {
@@ -50,16 +60,88 @@ form {
 
 .checkbox-label input {
     margin-right: 5px;
+    text-align: right;
+    float: right;
 }
 
-/* Style checkboxes in a single vertical column */
-.checkbox-label input {
+
+.submit-button {
+    background-color: #4caf50;body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(50% - 10px);
+    margin-right: 10px;
+}
+
+.form-field {
+    margin-bottom: 16px;
+}
+
+.field-label {
     display: block;
-    margin-top: 5px;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+.field-input, .checkbox-label {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.checkbox-label:hover {
+    color: #4caf50; /* Change color on hover */
 }
 
 .submit-button {
     background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
     color: #fff;
     padding: 10px 20px;
     border: none;
