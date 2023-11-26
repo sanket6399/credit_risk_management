@@ -4,7 +4,7 @@ import pickle
 app = Flask(__name__)
 
 # Load your machine learning model
-model = pickle.load(open(r"/app/randomForest_model.pkl", "rb"))
+model = pickle.load(open(r"/app/app/randomForest_model.pkl", "rb"))
 #model = joblib.load(r"/app/model.pkl")
 
 @app.route('/')
