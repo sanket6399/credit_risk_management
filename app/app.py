@@ -6,7 +6,8 @@ app = Flask(__name__)
 # Load your machine learning mode
 #model = joblib.load(r'C:\Users\Checkout\Desktop\credit_risk_management\app\randomForest_model.pkl')
 #model = pickle.load(open('/app/app/randomForest_model.pkl', 'rb'))
-with open('/app/app/randomForest_model.pkl', 'rb') as file:
+file_path = r"/app/app/randomForest_model.pkl"
+with open(file_path, 'rb') as file:
     model = pickle.load(file)
 @app.route('/')
 def index():
