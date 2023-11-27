@@ -1,0 +1,36 @@
+loan_amnt                     13000.000000
+term                              0.000000
+int_rate                         15.050000
+inq_last_6mths                    0.000000
+initial_list_status               1.000000
+out_prncp                         0.000000
+total_pymnt                   14720.029384
+total_rec_int                  1720.030000
+total_rec_late_fee                0.000000
+recoveries                        0.000000
+last_pymnt_amnt               11634.700000
+delinq_amnt                       0.000000
+debt_settlement_flag              1.000000
+A                                 0.000000
+B                                 0.000000
+C                                 1.000000
+D                                 0.000000
+home_ownership_RENT               1.000000
+home_ownership_MORTGAGE           0.000000
+home_ownership_OWN                0.000000
+Not Verified                      1.000000
+Source Verified                   0.000000
+Verified                          0.000000
+purpose_car                       0.000000
+purpose_credit_card               0.000000
+purpose_debt_consolidation        1.000000
+purpose_home_improvement          0.000000
+purpose_house                     0.000000
+purpose_major_purchase            0.000000
+purpose_medical                   0.000000
+purpose_moving                    0.000000
+purpose_renewable_energy          0.000000
+purpose_small_business            0.000000
+purpose_vacation                  0.000000
+purpose_wedding                   0.000000
+Name: 305297, dtype: float64
